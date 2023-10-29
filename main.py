@@ -18,27 +18,11 @@
 # else:
 #     print("error")
 
-import undetected_chromedriver as uc
-import selenium
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as  EC
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.action_chains import ActionChains
-import time
-
-options = uc.ChromeOptions()
-options.headless = False
-options.add_argument("--no-sandbox")
-driver = uc.Chrome(options=options)
-driver.get("https://www.baidu.com/")
-actions = ActionChains(driver)
-wait = WebDriverWait(driver,10)
-
-# element =wait.until(EC.visibility_of_element_located((By.XPATH,'//*[@id="kw"]')))
-# element.se
-element = driver.find_element(By.XPATH,'//*[@id="kw"]')
-actions.move_to_element(element)
-actions.click_and_hold(element)
-actions.send_keys("python")
-actions.perform()
-time.sleep(5)
+import pymongo
+from pymongo import MongoClient
+client = MongoClient('127.0.0.1', 27017)
+db = client["boss"]
+collection = db["deep_learning"]
+status = collection.delete_many({})
+if status.acknowledged :
+    print(1)
