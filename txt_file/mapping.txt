@@ -1,0 +1,6 @@
+c: c/c++
+c#: csharp
+objective-c: objc
+人脸: 人脸图像相关技术
+人脸识别: 人脸图像相关技术
+3d: 3d相关技术

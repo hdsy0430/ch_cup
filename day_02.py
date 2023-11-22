@@ -49,7 +49,7 @@ import xgboost
 from xgboost.sklearn import XGBClassifier
 import pandas as pd
 
-filename = "train.csv"
+filename = "csv_file/train.csv"
 data = pd.read_csv(filename)
 features = data[["Pclass","Age","Sex"]]
 copy = features.copy()

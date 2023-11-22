@@ -56,7 +56,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-filename = "train.csv"
+filename = "csv_file/train.csv"
 data = pd.read_csv(filename)
 #print(data.columns)
 features = data[["Pclass","Age","Sex"]]
@@ -65,7 +65,7 @@ features_copy.head()
 features_copy["Age"].fillna(features_copy["Age"].mean(),inplace=True)
 data_target = data["Survived"]
 
-test_data = pd.read_csv("test.csv")
+test_data = pd.read_csv("csv_file/test.csv")
 #print(test_data.columns)
 test_features = test_data[["Pclass","Age","Sex"]]
 test_features_copy = test_features.copy()

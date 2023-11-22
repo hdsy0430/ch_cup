@@ -22,6 +22,7 @@ options.add_argument("--no-sandbox")
 driver = Chrome(options=options)
 actions = ActionChains(driver)
 driver.get("https://scrape.center/")
+size = driver.get_window_size()
 driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
 time.sleep(2)
 
@@ -61,6 +62,8 @@ for name,h,w in zip(names,hs,ws):
     info["weight"] = w.text
     infos.append(info)
 print(infos)
+print("宽度",size["width"])
+print("高度",size["height"])
 
 
 time.sleep(2)
