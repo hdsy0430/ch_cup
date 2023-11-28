@@ -18,12 +18,19 @@
 # else:
 #     print("error")
 
-'''import pymongo
+import pymongo
 from pymongo import MongoClient
 client = MongoClient('127.0.0.1', 27017)
 db = client["boss"]
 collection = db["deep_learning"]
 status = collection.delete_many({})
 if status.acknowledged :
-    print(1)'''
+    print(1)
+
+
+def update_data() :
+    new_field = "detail"
+    status = collection.update_many({}, {'$set': {new_field: detail_list}})
+    if status.acknowledged :
+        print("success")
 

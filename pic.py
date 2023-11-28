@@ -8,6 +8,7 @@
 '''
 import matplotlib.pyplot as plt
 
+
 # 学习plt画各种图
 
 #设置字体的默认参数避免乱码

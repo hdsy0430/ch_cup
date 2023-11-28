@@ -20,6 +20,7 @@ import pymongo
 from pymongo import MongoClient
 import asyncio
 
+
 # 浏览器与对象初始化
 options = uc.ChromeOptions()
 # proxy_server = "127.0.0.1:7890"
@@ -40,8 +41,8 @@ client = MongoClient('127.0.0.1', 27017)
 db = client["boss"]
 collection = db["python"]
 
-url = "https://www.zhipin.com/hangzhou/"
-#url = 'https://www.zhipin.com/beijing/'
+#url = "https://www.zhipin.com/hangzhou/"
+url = 'https://www.zhipin.com/beijing/'
 base_url = "'https://www.zhipin.com"
 base_xpath_1 = '//*[@id="wrap"]/div[2]/div[2]/div/div[1]/div[2]/ul/li'
 base_xpath_2 = '//*[@id="wrap"]/div[2]/div[2]/div/div[1]/div[1]/ul/li'
