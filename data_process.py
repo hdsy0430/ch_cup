@@ -14,6 +14,7 @@ import logging
 from pymongo import MongoClient
 import re
 import matplotlib.pyplot as plt
+
 #统计技术层面
 #总体思路 : 对于demand字段直接进行映射后统计词频，对于指纹描述经过jieba分词后再进行映射并统计词频
 
